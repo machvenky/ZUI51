@@ -3,6 +3,7 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
+				<!-- Testing git demo-->
 				<!--<Page id="page" title="{i18n>title}">
 					<content>
 						<Carousel loop="true">
