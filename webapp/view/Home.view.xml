@@ -1,0 +1,56 @@
+<mvc:View controllerName="com.ui5.ZUI51.controller.Home" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<!--<Page id="page" title="{i18n>title}">
+					<content>
+						<Carousel loop="true">
+							<pages>
+							<Image src="images/sap.png" alt="no image"/>
+							<Image src="images/fiori.jpg" alt="no image"/>
+							</pages>
+						</Carousel>
+					</content>
+				</Page>-->
+				<Page id="page" title="{i18n>title}">
+					<Button text="Bind Data" press="onDisplayData"/>
+					<Input type="Text" value="{m1>/p1/original}" description="{m1>/p1/original}" valueLiveUpdate="true"/>
+					<!--<ComboBox id="productsCombo">
+						<items>
+						<core:Item key="{ProductID}" text="{ProductID}" id="ctempate"/>
+						</items>
+					</ComboBox>-->
+					<content>
+						<Table id="dynProductTable" growing="true" growingThreshold="5">
+							<columns>
+								<Column>
+									<Text text="{i18n>productID}"/>
+								</Column>
+								<Column>
+									<Text text="{i18n>productName}"/>
+								</Column>
+								<Column>
+									<Text text="{i18n>category}"/>
+								</Column>
+							<!--	<Column>
+									<Text text="Price"/>
+								</Column>-->
+							</columns>
+					<dependents>
+								<ColumnListItem type="Active" id="tableTemplate">
+									<cells>
+										<Text text="{ProductID}"/>
+										<Text text="{Name}"/>
+										<Text text="{Category}"/>
+									<!--	<Text text="{Price}" visible="{path:'Category',formatter:'.myFormatter.catVisible'}"/>-->
+									</cells>
+								</ColumnListItem>
+					</dependents>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,33 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog noDataText="No Products Found" title="Select Product"
+		items="{ path : '/ProductSet'}"
+		confirm="onVHItemSelected"
+		search="onVHSearch"
+		multiSelect="true"
+		rememberSelections="true">
+		<ColumnListItem>
+			<cells>
+				<Text text="{ProductID}"/>
+				<Text text="{Name}"/>
+				<Text text="{Category}"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+			<Column width="12em">
+				<header>
+					<Text text="Product ID"/>
+				</header>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<header>
+					<Text text="Category"/>
+				</header>
+			</Column>
+			<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+				<header>
+					<Text text="Product Name"/>
+				</header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>
